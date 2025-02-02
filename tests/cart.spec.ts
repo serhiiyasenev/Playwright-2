@@ -30,7 +30,7 @@ test.describe("Checking the cart", () => {
   });
 
   test("Add two items to cart and finish the order", async ({ page }) => {
-    await inventoryPage.addTwoItemsToCart();
+    await inventoryPage.addItemsToCart(["bolt-t-shirt", "bike-light"]);
     await inventoryPage.openCart();
 
     const cartItems = await cartPage.getCartItems();
