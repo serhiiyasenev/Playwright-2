@@ -6,4 +6,8 @@ export class CartPage {
   async getCartItems(): Promise<string[]> {
     return this.page.locator(".inventory_item_name").allTextContents();
   }
+
+  async clickCheckOut() {
+    await this.page.click("#checkout");
+  }
 }

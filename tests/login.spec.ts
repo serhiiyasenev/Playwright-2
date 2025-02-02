@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/login.page";
 
-test("авторизація: успішний вхід", async ({ page }) => {
+test("Authorization: successful login", async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.navigate();

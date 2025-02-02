@@ -16,6 +16,18 @@ export class InventoryPage {
     await addCartButton.click();
   }
 
+  async addTwoItemsToCart() {
+    const tShortButton = this.page.locator(
+      "[data-test=add-to-cart-sauce-labs-bolt-t-shirt]"
+    );
+    const bikeLightButton = this.page.locator(
+      "[data-test=add-to-cart-sauce-labs-bike-light]"
+    );
+
+    await tShortButton.click();
+    await bikeLightButton.click();
+  }
+
   async clickInventory() {
     const isVisible = await this.page
       .locator("[data-test=inventory-item-name]")
